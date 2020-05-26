@@ -1,3 +1,5 @@
+from datetime import date
+
 from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
@@ -23,3 +25,31 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     if created:
         CoreUserProfile.objects.create(user=instance)
     instance.coreuserprofile.save()
+
+
+# Data Models
+
+class WorkExperience(models.Model):
+    company_name = models.CharField(max_length=100)
+    company_address = models.CharField(max_length=100)
+    job_title = models.CharField(max_length=50)
+    start_date: date = models.DateField()
+    end_date: date = models.DateField()
+    is_current = models.BooleanField(default=False)
+    summary = models.CharField(max_length=500)
+    skills = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.company_name
+
+
+class WorkAccomplishment(models.Model):
+    accomplishment = models.CharField(max_length=500)
+    work_experience = models.ForeignKey(WorkExperience, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.accomplishment
+
+
+
+
