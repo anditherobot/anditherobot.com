@@ -10,6 +10,7 @@ urlpatterns = [
     path('hobbies/', hobbies, name='hobbies'),
     path('feed/', feed, name='feed'),
     path('contact/', contact, name='contact'),
+
     #path('accounts/profile/', login_required(profile_self), name='profile'),
     #path('accounts/<str:username>/', profile_others, name='profile_others'),
 

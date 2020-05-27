@@ -1,6 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 # Create your views here.
+from core.forms import ContactForm
+
 
 def index(request):
     template_name = 'core/index.html'
@@ -39,9 +41,18 @@ def feed(request):
     context = {'title': title}
     return render(request, template_name, context)
 
-def contact(request):
-    template_name = 'core/contact.html'
-    title = "contact page"
 
-    context = {'title': title}
-    return render(request, template_name, context)
+
+def contact(request):
+
+    if request.method != 'POST':
+        template_name = 'core/contact.html'
+        title = "contact page"
+        form = ContactForm()
+        context = {'title': title, 'form': form}
+        return render(request, template_name, context)
+
+    else:
+        form = ContactForm(request.POST)
+
+        return JsonResponse(request.POST)

@@ -1,15 +1,25 @@
 {% extends 'core/base.html' %}
 {% load static %}
-{% block title %}{{title}}{% endblock title %}
+{% block title %}{{ title }}{% endblock title %}
 {% block content %}
 
-<div class="row">
-<div class="col-sm-12">
-<h1>Contact</h1>
-    <p>A form to contact</p>
-    <p>A nice way to see where to follow me</p>
-</div>
-</div>
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Contact</h1>
+
+            <div>
+ <form role="form" action="/contact/" method="post">
+                {% csrf_token %}
+
+                {{ form.as_p }}
+
+                <button type="submit">Submit</button>
+          </form>
+              <!--  {{ form_data }} -->
+
+            </div>
+        </div>
+    </div>
 
 
 

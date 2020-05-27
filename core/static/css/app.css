@@ -14,10 +14,11 @@ h1 {
 
 .profile-img{
 display:flex;
-    align-self: center;
+align-self: center;
 border: 2px solid black;
 height: 200px;
 width: 200px;
 background-color: grey;
+
 
 }
