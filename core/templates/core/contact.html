@@ -2,20 +2,36 @@
 {% load static %}
 {% block title %}{{ title }}{% endblock title %}
 {% block content %}
-
+    {% if messages %}
+        <ul class="messages alert alert-warning alert-dismissible fade show" role="alert">
+            {% for message in messages %}
+                <li class="{{ message.tags }}">{{ message }}</li>
+            {% endfor %}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </ul>
+    {% endif %}
     <div class="row">
         <div class="col-sm-12">
             <h1>Contact</h1>
 
             <div>
- <form role="form" action="/contact/" method="post">
-                {% csrf_token %}
 
-                {{ form.as_p }}
+                {% if  form %}
+                    <form role="form" action="/contact/" method="post">
+                        {% csrf_token %}
 
-                <button type="submit">Submit</button>
-          </form>
-              <!--  {{ form_data }} -->
+                        {{ form.as_p }}
+
+                        <button type="submit">Submit</button>
+                    </form>
+                {% else %}
+                    <a href="/">Back Home</a>
+                {% endif %}
+
+
+                <!--  {{ form_data }} -->
 
             </div>
         </div>

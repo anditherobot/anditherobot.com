@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 # Create your views here.
 from core.forms import ContactForm
+from django.contrib import messages
 
 
 def index(request):
@@ -27,12 +28,14 @@ def tech(request):
     context = {'title': title}
     return render(request, template_name, context)
 
+
 def hobbies(request):
     template_name = 'core/hobbies.html'
     title = "hobbies page"
 
     context = {'title': title}
     return render(request, template_name, context)
+
 
 def feed(request):
     template_name = 'core/feed.html'
@@ -42,17 +45,17 @@ def feed(request):
     return render(request, template_name, context)
 
 
-
 def contact(request):
-
     if request.method != 'POST':
-        template_name = 'core/contact.html'
         title = "contact page"
         form = ContactForm()
         context = {'title': title, 'form': form}
-        return render(request, template_name, context)
+        return render(request, 'core/contact.html', context)
 
     else:
         form = ContactForm(request.POST)
-
-        return JsonResponse(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Message Sent successfully")
+            return render(request, 'core/contact.html')
+            # return JsonResponse(request.POST,)

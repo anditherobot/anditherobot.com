@@ -2,7 +2,7 @@ from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
 from django.contrib.auth.models import User
 from django import forms
-
+from .models import *
 class CustomUserCreationForm(UserCreationForm):
 
     class Meta(UserCreationForm):
@@ -17,10 +17,10 @@ class CustomUserChangeForm(UserChangeForm):
         fields = ('username',)
 
 
-class ContactForm(forms.Form):
-    contact_name = forms.CharField(required=True)
-    contact_email = forms.EmailField(required=True)
-    message = forms.CharField(
-        required=True,
-        widget=forms.Textarea
-    )
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = ContactMessage
+        fields = '__all__'
+        widgets = {
+            'contact_message': forms.Textarea(attrs={'placeholder': u'Insert Message Here'}),
+        }

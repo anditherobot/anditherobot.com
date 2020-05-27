@@ -50,10 +50,14 @@ class WorkAccomplishment(models.Model):
     def __str__(self):
         return self.accomplishment
 
+
 class ContactMessage(models.Model):
     contact_name = models.CharField(max_length=50)
     contact_email = models.EmailField()
     contact_message = models.CharField(max_length=1000, verbose_name="Message")
+
+    def __str__(self):
+        return self.contact_name + self.contact_message
 
 
 
