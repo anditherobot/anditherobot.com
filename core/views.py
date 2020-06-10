@@ -4,7 +4,6 @@ from django.http import HttpResponse, JsonResponse
 from core.forms import ContactForm
 from django.contrib import messages
 
-
 def index(request):
     template_name = 'core/index.html'
     title = "andi the robot"

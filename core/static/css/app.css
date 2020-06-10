@@ -28,3 +28,129 @@ background-color: #436EEE;
 border: 4px solid grey;
 border-radius: 5px;
 }
+
+ .main-header {
+    background-image: linear-gradient(#1e415e 10%,#2b5b84 90%);
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.03),inset 0 0 20px rgba(0,0,0,0.03);
+    font: normal 100%/1.625 SourceSansProRegular,Arial,sans-serif;
+  color: #fff;
+ }
+
+ .python-navigation{
+    background-color: #2d618c;
+    background-image: linear-gradient(#3776ab 30%,#2d618c 95%);
+border-top: 1px solid #629ccd;
+border-bottom: 1px solid #18334b;
+ }
+
+ nav > ul  {
+    margin-left: 0;
+    list-style: none;
+        list-style-image: none;
+    list-style-image: none;
+ }
+
+ .tier-1 {
+    float: none;
+    border-top: 0;
+    border-bottom: 0;
+    width: auto;
+    margin: 0 -5px 0 0;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: baseline;
+    border-right: 1px solid rgba(0,0,0,0.2);
+ }
+
+ .tier-1 > a {
+    padding: .65em 1.25em .55em;
+    color: #e6e8ea;
+    background-color: transparent;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    letter-spacing: .01em;
+
+ }
+
+.introduction {
+
+
+    text-align: center;
+    padding: 0 1.5em;
+    font-size: 1.5em;
+
+    font-size: 1.3125em;
+
+
+    color: #caccce;
+    font-size: 1.25em;
+    text-align: left;
+    padding: .25em .5em;
+    margin-top: .875em;
+    margin-bottom: .875em;
+ }
+
+ .attention{
+    color: #ffd343;
+    text-decoration: underline;
+ }
+
+ .widget-title  {
+
+    color: #444;
+    line-height: 1.25em;
+    margin: 0 0 .1em;
+    font-family: Flux-Regular,SourceSansProRegular,Arial,sans-serif;
+    
+
+}
+
+
+
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+
+.menu > li {
+    font-size: .9375em;
+    padding: .5em 0 .4em;
+    border-bottom: 1px solid #caccce;
+}
+.marker{
+    font-size: .9375em;
+}
+
+
+
+b, strong, th {
+    font-weight: 700;
+    font-family: SourceSansProBold,Arial,sans-serif;
+}
+
+.widget-md{
+
+    background-color: #f9f9f9;
+    border-top: 4px solid #75a8d3;  
+    display: flex;
+    flex-direction: row;
+    justify-items: baseline;
+}
+
+.tag-wrapper {
+    display: inline;
+}
+
+.tag-wrapper .tag {
+    white-space: nowrap;
+    color: #666;
+    font-size: .900em;
+    vertical-align: baseline;
+    padding: .2em .4em .1em;
+    background-color: #e6e8ea;
+    border-top: 1px solid #f2f4f6;
+    border-bottom: 1px solid #caccce;
+}

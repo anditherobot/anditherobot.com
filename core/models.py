@@ -60,6 +60,11 @@ class ContactMessage(models.Model):
         return self.contact_name + self.contact_message
 
 
+class SkillWidget(models.Model):
+    pass
+   
+
+
 
 
 

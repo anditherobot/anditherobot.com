@@ -3,62 +3,98 @@
 {% block title %}{{title}}{% endblock title %}
 {% block content %}
 
+
+<!-- for optional "do-not-print" class -->
+
 <div class="row">
-<div class="col-sm-12">
-<div class="container ">
- <!-- <img class=" mt-2 profile-img" src="{{user.coreuserprofile.profile_image.url}}" />-->
-  <img class=" mt-2 profile-img" src="{% static "/img/prof.jpg" %}" />
-  <h1 class="mb-0">Andi <span class="text-primary">The Robot</span></h1>
+  <div class="col-sm-12 main-header">
 
-</div>
 
- <p>Programmer and Hobbyist. Doing a million things
-This site is my main content publishing platform. It will grow incrementally. 
-This is a MVP. </p>
 
-        If you'd like to talk to me please contact me here  <a class="btn btn-primary" href="/contact">Contact</a></p>
+    SkillWidget
+          ttl
+          SkillSet=label:string,[items]:array
 
-    <p>This site is built from scratch with: Django + SQL. Hosted on a VPS</p>
-</div>
-</div>
+    <div class="widget-md">
+      <h2 class="widget-title">My current tech skills</h2>
+      <ul class="menu">
+        <li class="marker"> <b>Web Development</b> <span class="tag-wrapper"><a class="tag" href="http://www.djangoproject.com/">Django</a>, 
+          <a class="tag" href="http://www.pylonsproject.org/">Pyramid</a>, <a class="tag"
+              href="http://bottlepy.org">Bottle</a>, <a class="tag" href="http://tornadoweb.org">Tornado</a>, <a
+              href="http://flask.pocoo.org/" class="tag">Flask</a>, <a class="tag"
+              href="http://www.web2py.com/">web2py</a></span></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
 
-    <div class="row">
-  <div class="col-sm-8">
 
-  <div class="card">
-    <div class="card-header">
-     <h3>Recent Activity</h3> 
+      </ul>
     </div>
-    <div class="card-body">
-      <p>Incrementally Updating my site</p>
-      <p>Deployment completed</p>
-      <h4>Up Next: Update the look</h4>
+
+
+
+    <div class="container  ">
+      <!-- <img class=" mt-2 profile-img" src="{{user.coreuserprofile.profile_image.url}}" />-->
+
+      <div class="header-banner ">
+        <img class=" mt-2 profile-img" src="{% static "/img/prof.jpg" %}" />
+        <h1 class="mb-0">Andi <span class="text-primary">The Robot</span></h1>
+      </div>
+
+
+    </div>
+    <div class="introduction">
+      <p>Programmer and Hobbyist.
+        This site is my main content publishing platform. It will grow incrementally. </p>
+
+
+      <p> If you'd like to talk to me please <span class="attention">contact me here </span> <a class="btn btn-primary"
+          href="/contact">Contact</a></p>
+
+      <p>This site is built from scratch with: Django + SQL. Hosted on a VPS</p>
 
     </div>
   </div>
-      </div>
-
-      
 </div>
 
 <div class="row">
   <div class="col-sm-8">
 
-    <div class="card" >
+    <div class="card">
+      <div class="card-header">
+        <h3>Recent Activity</h3>
+      </div>
+      <div class="card-body">
+        <p>Incrementally Updating my site</p>
+        <p>Planned features: blog, photography gallery, small widgets.</p>
+        <h4>Current Task: Updating the appearance of the site. </h4>
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="row">
+  <div class="col-sm-8">
+
+    <div class="card">
       <div class="card-header">
         <h2>Find me on these platforms</h2>
       </div>
       <ul style="list-style: none; ">
-      
+
         <li><a href="https://www.twitter.com/anditherobot">Twitter<i class="fa fa-twitter"></i></a></li>
         <li><a href="https://www.github.com/anditherobot">Github<i class="fa fa-facebook"></i></a></li>
       </ul>
     </div>
 
 
- 
-     
-      </div>
+
+
+  </div>
 </div>
 
 

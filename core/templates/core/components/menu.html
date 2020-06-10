@@ -1,8 +1,8 @@
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand" href="/">Andi The Robot</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07"
+      aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -26,19 +26,46 @@
         <li class="nav-item">
           <a class="nav-link " href="/contact">Contact Me</a>
         </li>
-        
+
 
         {% if user.is_authenticated %}
-          <li class="nav-item">
-             <a class="btn btn-primary" href="{% url 'logout' %}">logout</a>
-          </li>
-          {% else %}
-           <li class="nav-item">
-             <a class="btn btn-primary" href="{% url 'login' %}">login</a>
-          </li>
-          {% endif %}
+        <li class="nav-item">
+          <a class="btn btn-primary" href="{% url 'logout' %}">logout</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="btn btn-primary" href="{% url 'login' %}">login</a>
+        </li>
+        {% endif %}
       </ul>
-     
+
     </div>
   </div>
+</nav>
+
+<nav id="mainnav" class="python-navigation main-navigation do-not-print" role="navigation">
+
+
+  <ul class="navigation menu" role="menubar" aria-label="Main Navigation">
+
+
+
+    <li id="about" class="tier-1 element-1   with-supernav" aria-haspopup="true">
+      <a href="/about/" title="" class="">About</a>
+
+    </li>
+
+
+    <li id="news" class="tier-1 element-6  " aria-haspopup="true">
+      <a href="/blogs/" title="News from around the Python world" class="">News</a>
+
+    </li>
+
+
+
+
+
+  </ul>
+
+
 </nav>
