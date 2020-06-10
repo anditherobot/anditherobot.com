@@ -6,3 +6,6 @@ I have setup some contraints.
 * Maintain my own cloud infrastructure
 * Write code Front-End Code and apply good UI/UX principles.
 * Write Server Side Code
+
+# Architecture
+![architecture image](archi.jpg "Current Architecture")
