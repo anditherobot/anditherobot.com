@@ -154,3 +154,9 @@ b, strong, th {
     border-top: 1px solid #f2f4f6;
     border-bottom: 1px solid #caccce;
 }
+
+.label-primary{
+    background-color: #75a8d3;
+    display: inline-flex;
+    padding: 5px;
+}
