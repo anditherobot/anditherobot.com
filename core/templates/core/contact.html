@@ -2,40 +2,49 @@
 {% load static %}
 {% block title %}{{ title }}{% endblock title %}
 {% block content %}
-    {% if messages %}
+
+
+<!-- Page Heading/Breadcrumbs -->
+<h1 class="mt-4 mb-3">Contact
+    <small>Me</small>
+</h1>
+
+
+
+<div class="row">
+    <div class="col-sm-12">
+        {% if messages %}
         <ul class="messages alert alert-warning alert-dismissible fade show" role="alert">
             {% for message in messages %}
-                <li class="{{ message.tags }}">{{ message }}</li>
+            <li class="{{ message.tags }}">{{ message }}</li>
             {% endfor %}
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </ul>
-    {% endif %}
-    <div class="row">
-        <div class="col-sm-12">
-            <h1>Contact</h1>
+        {% endif %}
 
-            <div>
+        <div>
 
-                {% if  form %}
-                    <form role="form" action="/contact/" method="post">
-                        {% csrf_token %}
+            {% if  form %}
+            <form role="form" action="/contact/" method="post">
+                {% csrf_token %}
 
-                        {{ form.as_p }}
-
-                        <button class="myblue" type="submit">Submit</button>
-                    </form>
-                {% else %}
-                    <a href="/">Back Home</a>
-                {% endif %}
+                {{ form.as_p }}
+                
+                <button class="myblue" type="submit">Submit</button>
+            </form>
+            {% else %}
+            <a href="/">Back Home</a>
+            {% endif %}
 
 
-                <!--  {{ form_data }} -->
+            <!--  {{ form_data }} -->
 
-            </div>
         </div>
     </div>
+</div>
+
 
 
 
