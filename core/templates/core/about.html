@@ -2,31 +2,33 @@
 {% load static %}
 {% block title %}{{title}}{% endblock title %}
 {% block content %}
+ <!-- Page Content -->
 
-<div class="row">
-<div class="col-sm-12">
-<h1>About</h1>
-<p>Hi I am Andi</p>
-<h2>Here's is a list</h2>
 
-<ol>
-    <li>One</li>
-    <li>Two</li>
-    <li>Three</li>
-    <li>Four</li>
-</ol>
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">About
+      <small>Me</small>
+    </h1>
 
-<ul style="list-style: none; background-color: green; color: white">
-    <li>One</li>
-    <li>Two</li>
-    <li style="color: red">Three</li>
-    <li>Four</li>
-</ul>
+    
 
-<p>Hello to all my friends. How are you ?</p>
+    <!-- Intro Content -->
+    <div class="row">
+      <div class="col-lg-4">
+        <img class="img-fluid rounded mb-4" src="{% static "/img/road.jpg" %}" />
+      </div>
+      <div class="col-lg-8">
+        <h2>About Me</h2>
+        <p>Hello Everybody! I am Andi Milhomme</p>
+        <p>I got started in programming during high school, and I never looked back. </p>
+        <p>I am not just interested in programming, the world fascinates me and I try to learn about it everyday.
+       In my spare time, I tend to explore my artistic side mainly through photography, filmaking, music and painting.</p>
 
-</div>
-</div>
+       <p>Welcome and Enjoy your time here.</p>
+      </div>
+    </div>
+    <!-- /.row -->
+
 
 
 
