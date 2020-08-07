@@ -7,7 +7,7 @@ urlpatterns = [
     path('page<int:page>/', index, name='feed'),
     path('about/', about, name='about'),
     path('tech/', tech, name='tech'),
-    path('hobbies/', hobbies, name='hobbies'),
+    path('photos/', photos, name='photos'),
     path('feed/', feed, name='feed'),
     path('contact/', contact, name='contact'),
 

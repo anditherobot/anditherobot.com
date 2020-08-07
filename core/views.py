@@ -28,9 +28,9 @@ def tech(request):
     return render(request, template_name, context)
 
 
-def hobbies(request):
-    template_name = 'core/hobbies.html'
-    title = "hobbies page"
+def photos(request):
+    template_name = 'core/photos.html'
+    title = "photos page"
 
     context = {'title': title}
     return render(request, template_name, context)
