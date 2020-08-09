@@ -31,3 +31,9 @@ class ContactForm(forms.ModelForm):
         widgets = {
             'contact_message': forms.Textarea(attrs={'placeholder': u'Insert Message Here'}),
         }
+
+class PictureForm(forms.ModelForm):
+
+    class Meta:
+        model = PicturePost
+        fields = ['description', 'image']

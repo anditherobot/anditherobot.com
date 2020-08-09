@@ -16,6 +16,14 @@
     <!-- Custom styles for this template -->
     <link href="{% static 'css/app.css' %}" rel="stylesheet">
 
+    <!--Gallery library: https://github.com/michaelsoriano/bootstrap-photo-gallery-->
+    <link href="{% static 'css/jquery.bsPhotoGallery.css' %}" rel="stylesheet">
+    
+   
+   
+
+
+
 </head>
 
 <body class="python home">
@@ -33,7 +41,19 @@
     <!-- Bootstrap core JavaScript -->
     <script src="{% static 'vendor/jquery/jquery.min.js'%}"></script>
     <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{% static 'js/jquery.bsPhotoGallery.js' %}"></script>	
     <script src="{% static 'js/app.js'%}"></script>
+
+    <script>
+        $(document).ready(function(){
+          $('ul.first').bsPhotoGallery({
+            "classes" : "col-xl-3 col-lg-2 col-md-4 col-sm-4",
+            "hasModal" : true,
+            "shortText" : false  
+          });
+          console.log('initiallized');
+        });
+      </script>
 
 </body>
 

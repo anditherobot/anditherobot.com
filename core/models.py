@@ -62,6 +62,10 @@ class ContactMessage(models.Model):
 
 class SkillWidget(models.Model):
     pass
+
+class PicturePost(models.Model):
+    description = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='images/')
    
 
 

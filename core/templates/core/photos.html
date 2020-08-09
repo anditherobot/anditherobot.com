@@ -11,5 +11,14 @@
   <p>Something dynamic, with nice controls and mobile friendly.</p>
 
 
+<ul class="row first">
+  {% for post in object_list %}
+  <li>
+   
+    <img  src="{{ post.image.url}}" alt="{{ post.description }}">
+    <p>{{ post.description }}</p>
+  </li>
+  {% endfor %}
+</ul>
 
 {% endblock %}

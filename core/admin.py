@@ -3,7 +3,7 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.models import User
 
 from .forms import ContactForm
-from .models import CoreUserProfile, WorkExperience, WorkAccomplishment, ContactMessage
+from .models import *
 # Register your models here.
 # Define an inline admin descriptor for Employee model
 # which acts a bit like a singleton
@@ -33,3 +33,4 @@ admin.site.register(WorkExperience)
 admin.site.register(WorkAccomplishment)
 
 admin.site.register(ContactMessage)
+admin.site.register(PicturePost)

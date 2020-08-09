@@ -1,8 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect 
 from django.http import HttpResponse, JsonResponse
 # Create your views here.
-from core.forms import ContactForm
+from core.forms import ContactForm, PictureForm
 from django.contrib import messages
+from .models import *
+from django.views.generic import ListView
 
 def index(request):
     template_name = 'core/index.html'
@@ -58,3 +60,25 @@ def contact(request):
             messages.success(request, "Message Sent successfully")
             return render(request, 'core/contact.html')
             # return JsonResponse(request.POST,)
+
+
+
+def hotel_image_view(request): 
+  
+    if request.method == 'POST': 
+        form =PictureForm(request.POST, request.FILES) 
+  
+        if form.is_valid(): 
+            form.save() 
+            return redirect('success') 
+    else: 
+        form = PictureForm() 
+    return render(request, 'core/gallery.html', {'form' : form}) 
+
+
+def success(request): 
+    return HttpResponse('successfully uploaded') 
+
+class PhotosView(ListView):
+    model = PicturePost
+    template_name = 'core/photos.html'
