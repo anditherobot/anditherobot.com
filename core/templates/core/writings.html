@@ -1,0 +1,39 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}{{title}}{% endblock title %}
+{% block content %}
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Writings
+      <small>A collection of ideas and thoughts</small>
+    </h1>
+
+    {% for post in object_list %}
+    <!-- Blog Post -->
+    <div class="card mb-4 list-writings">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-12">
+            <a href="{% url 'writings_detail' post.id %}" >
+            <h3 class="card-title">{{post.title}}  |   <small>Posted on: {{post.date_published}}</small>
+            </h3>
+            <p class="card-text">{{post.content |truncatewords:25}}</p>
+     </a>
+          </div>
+          <div class="col-lg-3">
+            
+          </div>
+      
+        </div>
+      </div>
+      <div class="card-footer text-muted">
+       
+      </div>
+    </div>
+    {% endfor %}
+     
+
+
+
+
+{% endblock %}
