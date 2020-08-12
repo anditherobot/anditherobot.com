@@ -34,3 +34,4 @@ admin.site.register(WorkAccomplishment)
 
 admin.site.register(ContactMessage)
 admin.site.register(PicturePost)
+admin.site.register(TextPost)

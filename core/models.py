@@ -66,6 +66,13 @@ class SkillWidget(models.Model):
 class PicturePost(models.Model):
     description = models.CharField(max_length=200)
     image = models.ImageField(upload_to='images/')
+
+class TextPost(models.Model):
+    title = models.CharField(max_length=100)
+    content = models.TextField(max_length=1000)
+    is_draft = models.BooleanField(default=True)
+    date_published = models.DateField(auto_now=True)
+
    
 
 

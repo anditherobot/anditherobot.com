@@ -4,7 +4,7 @@ from django.http import HttpResponse, JsonResponse
 from core.forms import ContactForm, PictureForm
 from django.contrib import messages
 from .models import *
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 def index(request):
     template_name = 'core/index.html'
@@ -22,12 +22,8 @@ def about(request):
     return render(request, template_name, context)
 
 
-def tech(request):
-    template_name = 'core/tech.html'
-    title = "tech page"
 
-    context = {'title': title}
-    return render(request, template_name, context)
+
 
 
 def photos(request):
@@ -82,3 +78,13 @@ def success(request):
 class PhotosView(ListView):
     model = PicturePost
     template_name = 'core/photos.html'
+
+class TextView(ListView):
+    model = TextPost
+    template_name = 'core/writings.html'
+
+class WritingsDetail(DetailView):
+    template_name = 'core/writings_detail.html'
+    model = TextPost
+
+
