@@ -185,3 +185,7 @@ b, strong, th {
     display: inline-flex;
     padding: 5px;
 }
+
+.blog-content {
+   padding-bottom: 10px;
+}
