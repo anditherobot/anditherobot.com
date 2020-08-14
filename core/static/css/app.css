@@ -3,10 +3,27 @@ h1 {
     font-size: 2rem;
 }
 
+h2 {
+    padding-bottom: .3em;
+    border-bottom: 1px solid #eee;
+    margin-top: 24px;
+margin-bottom: 16px;
+font-weight: 600;
+line-height: 1.25;
+}
+
+.skills-type{
+display: inline-block;
+text-transform: uppercase;
+background-color: rgb(255, 222, 116);
+padding: 0.25rem 0.5rem;
+background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPHBhdGggZmlsbD0iI0Y2Q0U0RSIgZD0iTSAxNiAwIEwgMTYgMTYgTCAwIDE2IHoiIC8+Cjwvc3ZnPgo=");
+background-size: 100%;
+margin-bottom: 1.45rem;
+}
+
 .intro-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    padding:  0 !important;
 
 }
 
