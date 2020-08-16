@@ -9,8 +9,10 @@ from django.views.generic import ListView, DetailView
 def index(request):
     template_name = 'core/index.html'
     title = "andi the robot"
-
-    context = {'title': title}
+    today = date.today()
+    days_since = date(2020, 8, 11)
+    day_count = (today - days_since).days
+    context = {'title': title, 'day_count': day_count}
     return render(request, template_name, context)
 
 
