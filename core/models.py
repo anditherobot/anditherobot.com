@@ -79,6 +79,10 @@ class TextPost(models.Model):
     def __str__(self):
         return self.title
 
+
+class ResetDayCounter(models.Model):
+    counter = models.IntegerField()
+
    
 
 
