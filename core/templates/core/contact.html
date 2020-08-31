@@ -12,7 +12,7 @@
 <p>Please fill out this form . I will quickly get back to you</p>
 
 <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-6">
         {% if messages %}
         <ul class="messages alert alert-warning alert-dismissible fade show" role="alert">
             {% for message in messages %}
@@ -27,15 +27,18 @@
         <div>
 
             {% if  form %}
-            <form role="form" action="/contact/" method="post">
+            <form role="form" action="/contact/" method="post" id="contact">
                 {% csrf_token %}
 
                 {{ form.as_p }}
+                <p>To see if you're not a robot answer this question: </p>
+                <p id="faketchapar">1 + 1 =       <input type="text" id="faketcha" ></p>
+           
                 
                 <button class="myblue" type="submit">Submit</button>
             </form>
             {% else %}
-            <a href="/">Back Home</a>
+            <a class="btn btn-success" href="/">Back Home</a>
             {% endif %}
 
 

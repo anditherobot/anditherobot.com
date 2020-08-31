@@ -46,7 +46,7 @@ def feed(request):
 
 def contact(request):
     if request.method != 'POST':
-        title = "revive contact page"
+        title = "contact page"
         form = ContactForm()
         context = {'title': title, 'form': form}
         return render(request, 'core/contact.html', context)

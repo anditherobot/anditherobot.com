@@ -3,13 +3,13 @@
 {% block title %}{{title}}{% endblock title %}
 {% block content %}
 
-
-<!-- for optional "do-not-print" class -->
+<div class="container  ">
+  <!-- for optional "do-not-print" class -->
   <div class="row">
     <div class="col-12">
       <div class=" main-header">
-<div class="container  ">
-  <div class="row  intro-container ">
+
+        <div class="row  intro-container ">
           <div class="col-sm-3"> <img class=" mt-2 profile-img" src="{% static "/img/prof.jpg" %}" /></div>
           <div class="col-sm-9">
             <h1 class="display-4">
@@ -20,103 +20,111 @@
             </p>
             <p class="lead"> If you'd like to talk to me please <a class="btn btn-primary" href="/contact">Contact
                 Me</a></p>
-                <a class="btn btn-primary" href="/photos">View new photos</a>
+            <a class="btn btn-primary" href="/photos">View new photos</a>
             <hr class="my-4">
-            <p class="badget badge badge-warning">This site is built from scratch with: Python + Django + SQL. <br> Hosted on a Virtual Private Server</p>
-         
+            <p class="badget badge badge-warning">This site is built from scratch with: Python + Django + SQL. <br>
+              Hosted on a Virtual Private Server</p>
+
           </div>
         </div>
 
+
+
+
       </div>
-
-
-
     </div>
-  </div>
-  <!--End row-->
+    <!--End row-->
+    <div class="row">
 
+      <div class="col-sm-12">
 
-  <div class="row">
-   
-    <div class="col-sm-6">
-     
-    
-      <p class="skills-type">FRONT-END</p>
-      <ul>
-        <li>Javascript Technologies: </li>
-        <li>Strong background in JavaScript ES6, Typescript HTML, CSS, React, Angular.</li>
-        <li>State management with Redux, using Functional Programming concepts</li>
-        <li> Mobile-first approach using Responsive Web Design</li>
-        <li> Web performance optimization techniques: Server Side Rendering, Code Splitting...</li>
-       
-      </ul>
+        <h3>Tech Skills</h3>
+      </div>
     </div>
+    <div class="row">
 
       <div class="col-sm-6">
-    
-         <p class="skills-type">BACK-END</p>
-          <h3>C# / .NET </h3>
-      <ul>
-       
-        <li>Proficient in: Django and ASP.NET </li>
-        <li>Comfortable with C# and Python</li>
-        <li>Database: PostgreSQL, SQLite, Entity Framework</li>
-        <li>Cloud Infrastructure: Docker, Linux CI/CD</li>
-       
-      </ul>
+
+
+        <p class="skills-type">FRONT-END</p>
+        <ul>
+          <li>Javascript Technologies: </li>
+          <li>Strong background in JavaScript ES6, Typescript HTML, CSS, React, Angular.</li>
+          <li>State management with Redux, using Functional Programming concepts</li>
+          <li> Mobile-first approach using Responsive Web Design</li>
+          <li> Web performance optimization techniques: Server Side Rendering, Code Splitting...</li>
+
+        </ul>
+      </div>
+
+      <div class="col-sm-6">
+
+        <p class="skills-type">BACK-END</p>
+        <h3>C# / .NET </h3>
+        <ul>
+
+          <li>Proficient in: Django and ASP.NET </li>
+          <li>Comfortable with C# and Python</li>
+          <li>Database: PostgreSQL, SQLite, Entity Framework</li>
+          <li>Cloud Infrastructure: Docker, Linux CI/CD</li>
+
+        </ul>
+      </div>
+
     </div>
 
-</div>
-
-  
 
 
 
 
-<div class="row">
-  <div class="col-sm-6">
 
-    <div class="card">
-      <div class="card-header">
-        <h3>Recent Activity <span style="font-size:16px">(the last four git commits to master)</span></h3>
+    <div class="row">
+      <div class="col-sm-6">
+
+        <div class="card">
+          <div class="card-header">
+            <h3>Recent Activity <span style="font-size:16px">(the last four git commits to master)</span></h3>
+          </div>
+          <div class="card-body">
+            <p class="label label-primary">August 11 2020: Added some visual styling.</p>
+            <p class="label label-primary">August 8 2020: Minimal photo gallery implemented</p>
+            <p class="label label-primary">August 6 2020: Implemented more reliable deployments</p>
+
+            <p class="label label-primary">Planned features: blog, photography gallery, small widgets.</p>
+
+
+          </div>
+        </div>
       </div>
-      <div class="card-body">
-        <p class="label label-primary">August 11 2020: Added some visual styling.</p>
-        <p class="label label-primary">August 8 2020: Minimal photo gallery implemented</p>
-        <p class="label label-primary">August 6 2020: Implemented more reliable deployments</p>
-        
-        <p class="label label-primary">Planned features: blog, photography gallery, small widgets.</p>
-        
+
+
+      <div class="col-sm-6">
+
+        <div class="card">
+          <div class="card-header">
+            <h2>Find me on these platforms</h2>
+          </div>
+          <div class="card-body">
+            <ul style="list-style: none; ">
+
+              <li class="label label-default"><a href="https://www.twitter.com/anditherobot">Twitter<i
+                    class="fa fa-twitter"></i></a></li>
+              <li class="label label-default"><a href="https://www.github.com/anditherobot">Github<i
+                    class="fa fa-facebook"></i></a></li>
+            </ul>
+            <p>Once everything starts to build</p>
+
+          </div>
+
+        </div>
+
+
 
       </div>
     </div>
   </div>
 
 
-  <div class="col-sm-6">
-
-    <div class="card">
-      <div class="card-header">
-        <h2>Find me on these platforms</h2>
-      </div>
-      <div class="card-body">
-        <ul style="list-style: none; ">
-
-          <li class="label label-default"><a href="https://www.twitter.com/anditherobot">Twitter<i class="fa fa-twitter"></i></a></li>
-          <li class="label label-default"><a href="https://www.github.com/anditherobot">Github<i class="fa fa-facebook"></i></a></li>
-        </ul>
-        <p>Once everything starts to build</p>
-
-      </div>
-     
-    </div>
-
-
-
 </div>
-</div>
-</div>
-
-
 
 {% endblock %}

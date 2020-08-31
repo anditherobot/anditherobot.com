@@ -80,8 +80,8 @@ class TextPost(models.Model):
         return self.title
 
 
-class ResetDayCounter(models.Model):
-    counter = models.IntegerField()
+
+
 
    
 

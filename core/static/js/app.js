@@ -10,4 +10,25 @@ $(document).ready(function(){
 
 
     console.log('initiallized');
+
+ 
+  $("#contact").submit(function(e){
+
+    if($('#faketcha').val() == 2 ) {
+     
+   }
+   else {
+      e.preventDefault();
+      $('#faketcha').css("border", "1px solid #ff0000")
+      if (!$('#faketchamessage').length) {
+      $( "<p id='faketchamessage' style='color:red;'>Error: can't submit form. Unless you enter the result of 1 + 1 </p>" ).insertBefore( "#faketchapar" );
+    }
+   }  
   });
+ 
+});
+
+  
+  
+
+

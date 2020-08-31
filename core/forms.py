@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.models import User
 from django import forms
 from .models import *
+from captcha.fields import CaptchaField
 class CustomUserCreationForm(UserCreationForm):
 
     class Meta(UserCreationForm):
@@ -37,3 +38,5 @@ class PictureForm(forms.ModelForm):
     class Meta:
         model = PicturePost
         fields = ['description', 'image']
+
+
