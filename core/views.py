@@ -10,7 +10,7 @@ def index(request):
     template_name = 'core/index.html'
     title = "andi the robot"
     today = date.today()
-    days_since = date(2020, 8, 24)
+    days_since = date(2020, 10, 1)
     day_count = (today - days_since).days
     context = {'title': title, 'day_count': day_count}
     return render(request, template_name, context)
