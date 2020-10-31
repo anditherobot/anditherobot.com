@@ -3,3 +3,4 @@ env/
 code
 *.pyc
 .idea/
+anditherobot/settings.py
