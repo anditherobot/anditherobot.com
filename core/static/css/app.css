@@ -36,10 +36,12 @@ margin-bottom: 1.45rem;
 .profile-img{
 display:flex;
 align-self: center;
-border: 2px solid black;
+border: 2px solid grey;
+box-shadow: 5px 10px #888888;
 height: 200px;
 width: 200px;
 background-color: grey;
+border-radius: 25px;
 
 
 }
