@@ -3,7 +3,7 @@
 {% block title %}{{title}}{% endblock title %}
 {% block content %}
 
-<div class="container  ">
+<div class="container">
   <!-- for optional "do-not-print" class -->
   <div class="row">
     <div class="col-12">
@@ -35,6 +35,15 @@
     </div>
      </div>
     <!--End row-->
+<div class="row">
+  <div class="col-12">
+    <h2>Latest Posts</h2>
+    <p class="label label-primary">{{post.title  |truncatechars:60 }}</p> (This space is for the 5 most recent articles)
+    <a class="btn btn-primary" href="/writings">View all essays
+      </a>
+  </div>
+</div>
+
     <div class="row">
 
       <div class="col-12">
@@ -100,11 +109,11 @@
             <h3>Recent Activity <span style="font-size:16px">(the last four git commits to master)</span></h3>
           </div>
           <div class="card-body">
+          <p class="label label-primary">Oct 31 2020: Removed harsh white, added grey.</p>
             <p class="label label-primary">August 11 2020: Added some visual styling.</p>
             <p class="label label-primary">August 8 2020: Minimal photo gallery implemented</p>
             <p class="label label-primary">August 6 2020: Implemented more reliable deployments</p>
 
-            <p class="label label-primary">Planned features: blog, photography gallery, small widgets.</p>
 
 
           </div>
@@ -127,7 +136,11 @@
                     class="fa fa-facebook"></i></a></li>
             </ul>
             <p>Once everything starts to build</p>
+            <p>Maybe everyone will have their own platform. Maybe each platform will talk to each other. Instead of 
+              relying on a centralized system. People will host their own data. They will just pay for the transmission.
+             If people can't afford to pay, or they may be funded by ethical ads<p>
 
+            </p>
           </div>
 
         </div>

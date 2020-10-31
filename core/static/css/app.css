@@ -189,3 +189,7 @@ b, strong, th {
 .blog-content {
    padding-bottom: 10px;
 }
+
+.base-class{
+    background-color: #d3d3d3;
+}
