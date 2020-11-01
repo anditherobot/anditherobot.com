@@ -4,3 +4,4 @@ code
 *.pyc
 .idea/
 anditherobot/settings.py
+db.sqlite3
