@@ -13,11 +13,11 @@ def index(request):
     days_since = date(2020, 10, 30)
     day_count = (today - days_since).days
     try:
-        post = TextPost.objects.latest('date_published')
+        posts = TextPost.objects.all()
     except TextPost.DoesNotExist:
         post = None
     
-    context = {'title': title, 'day_count': day_count, 'post' : post}
+    context = {'title': title, 'day_count': day_count, 'posts' : posts}
     return render(request, template_name, context)
 
 

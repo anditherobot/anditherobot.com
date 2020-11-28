@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-12">
+        <section class="purple-background ">
+            <h2>Latest Posts <a class="btn btn-primary" href="/writings">View all essays </a></h2>
+
+            <section class="d-flex purple-background">
+                {% for post in posts %}
+                <div class="col-sm white-box">
+
+                    <h3>{{post.title}}</h3>
+                    <p>{{post.content |truncatechars:60}}</p>
+                    <a class="btn btn-secondary" href={% url 'writings_detail' post.id %}>Read more >></a>
+                </div>
+                {% endfor %}
+            </section>
+        </section>
+    </div>

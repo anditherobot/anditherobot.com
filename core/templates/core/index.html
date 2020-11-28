@@ -35,13 +35,26 @@
     </div>
      </div>
     <!--End row-->
-<div class="row">
-  <div class="col-12">
-    <h2>Latest Posts</h2>
+
+    {% include 'core/components/latest-list.html' %}
+
+  
+</div>
+<div style="display: none;" class="row">
+  <div  class="col-12">
+    <h2> Projects</h2>
+  </div>
+  <div class="col-6">
+    <h2>Haitian Dictionary</h2>
     <p class="label label-primary">{{post.title  |truncatechars:60 }}</p> (This space is for the 5 most recent articles)
     <a class="btn btn-primary" href="/writings">View all essays
       </a>
   </div>
+  <div class="col-6">
+    <h2>Tiny Risks</h2>
+   <p></p>
+  </div>
+  
 </div>
 
     <div class="row">

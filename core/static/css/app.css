@@ -4,7 +4,8 @@ h1 {
 }
 
 h2 {
-    padding-bottom: .3em;
+    padding: .2em;
+    color: white;
     border-bottom: 1px solid #eee;
     margin-top: 24px;
 margin-bottom: 16px;
@@ -194,4 +195,18 @@ b, strong, th {
 
 .base-class{
     background-color: #d3d3d3;
+}
+
+.purple-background {
+    background-color: #4F284B;
+}
+
+
+.white-box {
+    height: auto;
+    background-color: white;
+    border: 1px solid black;
+    width: auto;
+    padding: 20px;
+    margin: 10px;
 }
