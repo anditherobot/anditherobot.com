@@ -1,5 +1,6 @@
-from django.urls import path
+from django.urls import path,  include
 from django.contrib.auth.decorators import login_required
+
 from core.views import *
 
 urlpatterns = [
@@ -13,6 +14,7 @@ urlpatterns = [
     path('contact/', contact, name='contact'),
     #path('image_upload', hotel_image_view, name = 'image_upload'),
      path('success', success, name = 'success'), 
+   
 
     #path('accounts/profile/', login_required(profile_self), name='profile'),
     #path('accounts/<str:username>/', profile_others, name='profile_others'),

@@ -1,0 +1,11 @@
+
+
+{% load wagtailcore_tags %}
+
+{% block body_class %}
+<h2>{{ page.title|richtext }}</h2>
+{% endblock %}
+
+{% block content %}
+    {{ page.body|richtext }}
+{% endblock %}c

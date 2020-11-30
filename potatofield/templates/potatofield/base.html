@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{% block title %} {% endblock title %} </title>
+    <link  href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"/>
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/app.css' %}" rel="stylesheet">
+
+    <!--Gallery library: https://github.com/michaelsoriano/bootstrap-photo-gallery-->
+    <link href="{% static 'css/jquery.bsPhotoGallery.css' %}" rel="stylesheet">
+    
+   
+   
+
+
+
+</head>
+
+<body class="python base-class">
+    {% include 'core/components/menu.html' %}
+    
+    <!-- Page Content -->
+    <div class="container base-container flex-grow-1">
+
+        {% block content %} {% endblock %}
+
+    </div>
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js'%}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{% static 'js/jquery.bsPhotoGallery.js' %}"></script>	
+    <script src="{% static 'js/app.js'%}"></script>
+
+    <script>
+       
+      </script>
+
+</body>
+
+</html>
