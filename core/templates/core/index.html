@@ -13,17 +13,16 @@
           <div class="col-sm-3"> <img class=" mt-2 profile-img " src="{% static "/img/profile.jpg" %}" /></div>
           <div class="col-sm-9">
             <h1 class="display-4">
-              <h1 class="mb-0">Andi <span class="text-primary">The Robot</span></h1>
-              <p> <strong>{{day_count}}</strong> Days Since last update</p>
+              <h1 class="mb-0">Andi <span class="text-primary">Mihomme</span></h1>
+              
             </h1>
-            <p>Programmer and Hobbyist. This site is my main content publishing platform. It will grow incrementally.
-            </p>
+           
             <p class="lead"> If you'd like to talk to me please <a class="btn btn-primary" href="/contact">Contact
                 Me</a></p>
-            <a class="btn btn-primary" href="/photos">View new photos</a>
+
             <hr class="my-4">
-            <p class="badget badge badge-warning">This site is built from scratch with: Python + Django + SQL. <br>
-              Hosted on a Virtual Private Server</p>
+            
+            <p class="badget badge badge-warning"> <a href="projects">curiosity</a></p>
 
           </div>
         </div>
@@ -37,126 +36,11 @@
     <!--End row-->
 
     {% include 'core/components/latest-list.html' %}
+    {% include 'core/components/latest-photos.html' %}
 
   
 </div>
-<div style="display: none;" class="row">
-  <div  class="col-12">
-    <h2> Projects</h2>
-  </div>
-  <div class="col-6">
-    <h2>Haitian Dictionary</h2>
-    <p class="label label-primary">{{post.title  |truncatechars:60 }}</p> (This space is for the 5 most recent articles)
-    <a class="btn btn-primary" href="/writings">View all essays
-      </a>
-  </div>
-  <div class="col-6">
-    <h2>Tiny Risks</h2>
-   <p></p>
-  </div>
-  
-</div>
 
-    <div class="row">
-
-      <div class="col-12">
-
-        <h3  >Tech Skills</h3>
-      </div>
-    </div>
-    <div class="row">
-
-      <div class="col-sm-6">
-
-        <div class="card">
-          <div class="card-header">
-            <h3 class="skills-type">
-              <p>FRONT-END</p>
-            </h3>
-          </div>
-          <div class="card-body">
-            <ul>
-              <li>Javascript Technologies: </li>
-              <li>Strong background in JavaScript ES6, Typescript HTML, CSS, React, Angular.</li>
-              <li>State management with Redux, using Functional Programming concepts</li>
-              <li> Mobile-first approach using Responsive Web Design</li>
-              <li> Web performance optimization techniques: Server Side Rendering, Code Splitting...</li>
-
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-header">
-            <h3 class="skills-type">
-              <p>BACK-END</p>
-            </h3>
-          </div>
-          <div class="card-body">
-
-
-            <ul>
-
-              <li>Proficient in: Django and ASP.NET </li>
-              <li>Comfortable with C# and Python</li>
-              <li>Database: PostgreSQL, SQLite, Entity Framework</li>
-              <li>Cloud Infrastructure: Docker, Linux CI/CD</li>
-
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-
-
-
-    <div class="row">
-      <div class="col-sm-6">
-
-        <div class="card">
-          <div class="card-header">
-            <h3>Recent Activity <span style="font-size:16px">(the last four git commits to master)</span></h3>
-          </div>
-          <div class="card-body">
-          <p class="label label-primary">Oct 31 2020: Removed harsh white, added grey.</p>
-            <p class="label label-primary">August 11 2020: Added some visual styling.</p>
-            <p class="label label-primary">August 8 2020: Minimal photo gallery implemented</p>
-            <p class="label label-primary">August 6 2020: Implemented more reliable deployments</p>
-
-
-
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-sm-6">
-
-        <div class="card">
-          <div class="card-header">
-            <h2>Find me on these platforms</h2>
-          </div>
-          <div class="card-body">
-            <ul style="list-style: none; ">
-
-              <li class="label label-default"><a href="https://www.twitter.com/anditherobot">Twitter<i
-                    class="fa fa-twitter"></i></a></li>
-              <li class="label label-default"><a href="https://www.github.com/anditherobot">Github<i
-                    class="fa fa-facebook"></i></a></li>
-            </ul>
-            <p>Once everything starts to build</p>
-            <p>Maybe everyone will have their own platform. Maybe each platform will talk to each other. Instead of 
-              relying on a centralized system. People will host their own data. They will just pay for the transmission.
-             If people can't afford to pay, or they may be funded by ethical ads<p>
-
-            </p>
-          </div>
-
-        </div>
 
 
 

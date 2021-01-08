@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'taggit',
     'modelcluster',
     'potatofield',
+    'captcha',
     'core',
 ]
 

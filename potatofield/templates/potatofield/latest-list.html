@@ -1,0 +1,43 @@
+
+{% load wagtailcore_tags %}
+<div class="row">
+    <div class="col-12 purple-background">
+   
+            <h2>Recent Posts <a class="btn btn-primary" href="/pages">View all essays </a></h2>
+            <section class="d-flex purple-child">
+            {% for post in page.get_children %}
+            <div class="col-sm white-box">
+                <h2><a href="{% pageurl post %}">{{ post.title }}</a></h2>
+                {{ post.specific.intro }}
+                {{ post.specific.body|richtext }}
+               
+            </div>
+          
+
+            {% endfor %}
+          
+               
+              
+            </section>
+       
+    </div>
+
+    <style>
+        .purple-background {
+            background-color: purple;
+          
+        }
+
+        .purple-child {
+            background-color: azure;
+            flex-direction: row;
+            margin: 5px;
+        }
+
+        .white-box {
+            display: flex;
+            background-color: gray;
+            margin: 5px;
+           
+        }
+    </style>

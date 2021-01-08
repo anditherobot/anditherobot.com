@@ -14,10 +14,11 @@ def index(request):
     day_count = (today - days_since).days
     try:
         posts = TextPost.objects.all()
+        pictures = PicturePost.objects.all()
     except TextPost.DoesNotExist:
         post = None
     
-    context = {'title': title, 'day_count': day_count, 'posts' : posts}
+    context = {'title': title, 'day_count': day_count, 'posts' : posts, 'pictures' : pictures}
     return render(request, template_name, context)
 
 

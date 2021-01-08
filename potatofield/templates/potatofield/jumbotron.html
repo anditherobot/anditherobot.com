@@ -1,0 +1,15 @@
+{% load wagtailcore_tags %}
+{% load static wagtailimages_tags %}
+
+{% with blocks=self.jumbotron %}
+<section class="jumbotron">
+
+    <h1 class="display-4">{{ page.heading }}</h1>
+    <p class="lead">{{page.paragraph}}</p>
+    <hr class="my-4">
+    {% image page.image width-400 %}
+</section>
+
+
+
+{% endwith %}

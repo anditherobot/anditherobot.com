@@ -1,0 +1,12 @@
+{% extends './base.html' %}
+{% load wagtailcore_tags %}
+{% block content %}
+
+<h1>{{ page.title }}</h1>
+
+<p>List of events below heres</p>
+
+{% for post in page.get_children %}
+    {{ post.banner_title }}
+{% endfor %}
+{% endblock %}

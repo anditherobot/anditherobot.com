@@ -3,9 +3,18 @@
 {% load wagtailcore_tags %}
 
 {% block body_class %}
-<h2>{{ page.title|richtext }}</h2>
+<section class="css-home_page">
+<h1>{{ page.title|richtext }}</h1>
+{% endblock %}s
+{% block content %}
+    <h3>{{ page.body|richtext }}a</h3>
 {% endblock %}
 
-{% block content %}
-    {{ page.body|richtext }}
-{% endblock %}c
+</section>
+
+<style>
+
+    .css-home_page {
+        background-color: #e7e5e1;
+    }
+</style>

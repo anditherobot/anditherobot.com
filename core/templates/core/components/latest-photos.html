@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-12">
+        <section class="purple-background ">
+            <h2>Latest Audio <a class="btn btn-primary" href="/photos">View all photos </a></h2>
+
+            <section class="d-flex purple-background">
+             
+
+                <ul class="row first">
+  {% for post in pictures %}
+  <li>
+     <div class="col-sm white-box">
+    <img  src="{{ post.image.url}}" alt="{{ post.description }}">
+    <p>{{ post.description }}</p>
+      </div>
+  </li>
+  {% endfor %}
+</ul>
+            </section>
+        </section>
+    </div>
+      </div>
